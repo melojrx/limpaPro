@@ -1,15 +1,67 @@
+"use client";
+
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Mail, MapPin, Phone, Loader2 } from 'lucide-react';
+import { showSuccess, showError } from '@/utils/toast';
+
+const formSchema = z.object({
+  name: z.string().min(2, { message: 'O nome deve ter pelo menos 2 caracteres.' }),
+  email: z.string().email({ message: 'Por favor, insira um email válido.' }),
+  phone: z.string().min(14, { message: 'Por favor, insira um telefone válido.' }),
+  serviceType: z.string({ required_error: 'Por favor, selecione um tipo de serviço.' }),
+  message: z.string().optional(),
+});
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Lógica de envio do formulário será adicionada aqui
-    alert('Formulário enviado! (simulação)');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+    },
+  });
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const input = e.target.value.replace(/\D/g, '');
+    let formattedPhone = '';
+    if (input.length > 0) {
+      formattedPhone = `(${input.substring(0, 2)}`;
+    }
+    if (input.length > 2) {
+      formattedPhone += `) ${input.substring(2, 7)}`;
+    }
+    if (input.length > 7) {
+      formattedPhone += `-${input.substring(7, 11)}`;
+    }
+    form.setValue('phone', formattedPhone);
+  };
+
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    setIsSubmitting(true);
+    try {
+      // Simula uma chamada de API
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      console.log('Dados do formulário:', values);
+      showSuccess('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+      form.reset();
+    } catch (error) {
+      showError('Ocorreu um erro ao enviar a mensagem. Tente novamente.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -23,40 +75,94 @@ const Contact = () => {
         </div>
         <div className="mt-12 grid md:grid-cols-2 gap-12">
           <div className="bg-gray-50 p-8 rounded-lg">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <Label htmlFor="name">Nome</Label>
-                <Input id="name" type="text" placeholder="Seu nome completo" required />
-              </div>
-              <div>
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="seu@email.com" required />
-              </div>
-              <div>
-                <Label htmlFor="phone">Telefone</Label>
-                <Input id="phone" type="tel" placeholder="(XX) XXXXX-XXXX" required />
-              </div>
-              <div>
-                <Label htmlFor="service-type">Tipo de Serviço</Label>
-                <Select required>
-                  <SelectTrigger id="service-type">
-                    <SelectValue placeholder="Selecione o serviço" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="residencial">Limpeza Residencial</SelectItem>
-                    <SelectItem value="comercial">Limpeza Comercial</SelectItem>
-                    <SelectItem value="completa">Faxina Completa</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <div>
-                <Label htmlFor="message">Mensagem</Label>
-                <Textarea id="message" placeholder="Descreva o que você precisa..." rows={4} />
-              </div>
-              <Button type="submit" className="w-full bg-blue-800 hover:bg-blue-900">
-                Enviar Mensagem
-              </Button>
-            </form>
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Nome</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Seu nome completo" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input type="email" placeholder="seu@email.com" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Telefone</FormLabel>
+                      <FormControl>
+                        <Input placeholder="(XX) XXXXX-XXXX" {...field} onChange={handlePhoneChange} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="serviceType"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Tipo de Serviço</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Selecione o serviço" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="residencial">Limpeza Residencial</SelectItem>
+                          <SelectItem value="comercial">Limpeza Comercial</SelectItem>
+                          <SelectItem value="completa">Faxina Completa</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Mensagem</FormLabel>
+                      <FormControl>
+                        <Textarea placeholder="Descreva o que você precisa..." rows={4} {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button type="submit" className="w-full bg-blue-800 hover:bg-blue-900" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Enviando...
+                    </>
+                  ) : (
+                    'Enviar Mensagem'
+                  )}
+                </Button>
+              </form>
+            </Form>
           </div>
           <div className="space-y-8">
             <div>
@@ -78,7 +184,6 @@ const Contact = () => {
             </div>
             <div>
               <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-                {/* Placeholder para o mapa */}
                 <div className="bg-gray-200 flex items-center justify-center">
                   <p className="text-gray-500">Mapa de Localização</p>
                 </div>
