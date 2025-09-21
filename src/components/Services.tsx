@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Building, Check, Home, Sparkles } from 'lucide-react';
+import AnimatedWrapper from './AnimatedWrapper';
 
 const services = [
   {
@@ -33,24 +34,26 @@ const Services = () => {
           </p>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <Card key={service.title} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="items-center text-center">
-                {service.icon}
-                <CardTitle className="mt-4 text-xl font-semibold">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-gray-500 mb-6">{service.description}</p>
-                <ul className="text-left space-y-2">
-                  {service.items.map((item) => (
-                    <li key={item} className="flex items-start">
-                      <Check className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />
-                      <span className="text-gray-600">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+          {services.map((service, index) => (
+            <AnimatedWrapper key={service.title} delay={index * 100}>
+              <Card className="h-full shadow-lg hover:shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300">
+                <CardHeader className="items-center text-center">
+                  {service.icon}
+                  <CardTitle className="mt-4 text-xl font-semibold">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-gray-500 mb-6">{service.description}</p>
+                  <ul className="text-left space-y-2">
+                    {service.items.map((item) => (
+                      <li key={item} className="flex items-start">
+                        <Check className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />
+                        <span className="text-gray-600">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </AnimatedWrapper>
           ))}
         </div>
       </div>

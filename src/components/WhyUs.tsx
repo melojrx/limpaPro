@@ -1,4 +1,5 @@
 import { Award, Leaf, ShieldCheck, Users } from 'lucide-react';
+import AnimatedWrapper from './AnimatedWrapper';
 
 const features = [
   {
@@ -34,14 +35,16 @@ const WhyUs = () => {
           </p>
         </div>
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {features.map((feature) => (
-            <div key={feature.title} className="text-center p-6">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mx-auto mb-4">
-                {feature.icon}
+          {features.map((feature, index) => (
+            <AnimatedWrapper key={feature.title} delay={index * 100}>
+              <div className="text-center p-6">
+                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mx-auto mb-4 transition-transform duration-300 hover:scale-110">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800">{feature.title}</h3>
+                <p className="mt-2 text-gray-500">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800">{feature.title}</h3>
-              <p className="mt-2 text-gray-500">{feature.description}</p>
-            </div>
+            </AnimatedWrapper>
           ))}
         </div>
       </div>

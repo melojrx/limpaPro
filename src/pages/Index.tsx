@@ -6,6 +6,7 @@ import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import AnimatedWrapper from '@/components/AnimatedWrapper';
 
 const Index = () => {
   return (
@@ -15,8 +16,12 @@ const Index = () => {
         <Hero />
         <Services />
         <WhyUs />
-        <About />
-        <Contact />
+        <AnimatedWrapper>
+          <About />
+        </AnimatedWrapper>
+        <AnimatedWrapper>
+          <Contact />
+        </AnimatedWrapper>
       </main>
       <Footer />
       <WhatsAppButton />
