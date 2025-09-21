@@ -5,7 +5,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-black?style=for-the-badge&logo=tailwindcss)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-black?style=for-the-badge&logo=typescript)
 
-
+![Screenshot Desktop](public/screenshot_desktop.png)
 
 **[Live Demo](https://limpapro.vercel.app)** | **[Repositório do Projeto](https://github.com/seu-usuario/limpapro-site)**
 
@@ -74,13 +74,13 @@ O resultado final é um site institucional de alta performance, visualmente atra
 ## 6. Capturas de Tela
 
 #### Visão Desktop
-
+![Screenshot Desktop](public/screenshot_desktop.png)
 
 #### Visão Mobile
-*(Adicionar screenshot da versão mobile aqui)*
+![Screenshot Mobile](public/screenshot_mobile.png)
 
 #### Recursos Interativos
-*(Adicionar screenshot do mapa ou formulário aqui)*
+![Screenshot Mapa](public/screenshot_mapa.png)
 
 ## 7. Instalação e Uso Local
 
