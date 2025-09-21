@@ -1,11 +1,12 @@
 # LimpaPro - Site Institucional para Empresa de Limpeza
 
 ![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)
-![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-Vite-black?style=for-the-badge&logo=react)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-black?style=for-the-badge&logo=tailwindcss)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-black?style=for-the-badge&logo=typescript)
-
-![Screenshot Desktop](public/screenshot_desktop.png)
+![Dyad](https://img.shields.io/badge/Development-Dyad-blue?style=for-the-badge)
+![Gemini](https://img.shields.io/badge/LLM-Gemini_2.5_Pro-blue?style=for-the-badge&logo=google-gemini)
+![Claude](https://img.shields.io/badge/Prompt_Gen-Claude-orange?style=for-the-badge)
 
 **[Live Demo](https://limpapro.vercel.app)** | **[Repositório do Projeto](https://github.com/seu-usuario/limpapro-site)**
 
@@ -74,13 +75,13 @@ O resultado final é um site institucional de alta performance, visualmente atra
 ## 6. Capturas de Tela
 
 #### Visão Desktop
-![Screenshot Desktop](public/screenshot_desktop.png)
+
 
 #### Visão Mobile
-![Screenshot Mobile](public/screenshot_mobile.png)
+
 
 #### Recursos Interativos
-![Screenshot Mapa](public/screenshot_mapa.png)
+
 
 ## 7. Instalação e Uso Local
 

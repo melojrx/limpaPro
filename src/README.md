@@ -8,8 +8,6 @@
 ![Gemini](https://img.shields.io/badge/LLM-Gemini_2.5_Pro-blue?style=for-the-badge&logo=google-gemini)
 ![Claude](https://img.shields.io/badge/Prompt_Gen-Claude-orange?style=for-the-badge)
 
-
-
 **[Live Demo](https://limpapro.vercel.app)** | **[Repositório do Projeto](https://github.com/seu-usuario/limpapro-site)**
 
 O LimpaPro é um site institucional one-page, moderno e totalmente responsivo, desenvolvido para empresas de limpeza profissional. O projeto foi criado para transformar a presença digital do negócio, focando em gerar confiança, capturar leads qualificados e comunicar valor de forma clara e eficiente.
