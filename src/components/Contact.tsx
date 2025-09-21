@@ -6,12 +6,12 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Mail, MapPin, Phone, Loader2 } from 'lucide-react';
 import { showSuccess, showError } from '@/utils/toast';
+import Map from './Map';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'O nome deve ter pelo menos 2 caracteres.' }),
@@ -52,7 +52,6 @@ const Contact = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     try {
-      // Simula uma chamada de API
       await new Promise(resolve => setTimeout(resolve, 2000));
       console.log('Dados do formulário:', values);
       showSuccess('Mensagem enviada com sucesso! Entraremos em contato em breve.');
@@ -168,26 +167,23 @@ const Contact = () => {
             <div>
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Nossas Informações</h3>
               <div className="space-y-4 text-gray-600">
+                <div className="flex items-start gap-4">
+                  <MapPin className="h-6 w-6 text-blue-800 flex-shrink-0 mt-1" />
+                  <span>Rua São Joaquim, 240 - Santana, Piracicaba - SP, CEP 13411-515</span>
+                </div>
                 <div className="flex items-center gap-4">
                   <Phone className="h-6 w-6 text-blue-800" />
-                  <span>(11) 98765-4321</span>
+                  <a href="tel:+551935420266" className="hover:text-blue-800">(19) 3542-0266</a>
                 </div>
                 <div className="flex items-center gap-4">
                   <Mail className="h-6 w-6 text-blue-800" />
                   <span>contato@limpapro.com</span>
                 </div>
-                <div className="flex items-center gap-4">
-                  <MapPin className="h-6 w-6 text-blue-800" />
-                  <span>Av. Principal, 123 - São Paulo, SP</span>
-                </div>
               </div>
             </div>
             <div>
-              <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-                <div className="bg-gray-200 flex items-center justify-center">
-                  <p className="text-gray-500">Mapa de Localização</p>
-                </div>
-              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Nossa Localização</h3>
+              <Map />
             </div>
           </div>
         </div>
