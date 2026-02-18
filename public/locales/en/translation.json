@@ -1,0 +1,155 @@
+{
+  "common": {
+    "cta": "Get a Free Quote",
+    "learnMore": "Learn More",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "loading": "Loading..."
+  },
+  "nav": {
+    "services": "Services",
+    "whyUs": "Why Us",
+    "about": "About Us",
+    "contact": "Contact",
+    "cta": "Get a Quote"
+  },
+  "hero": {
+    "badge": "Professional Cleaning Service",
+    "title": "Professional Cleaning That Transforms Your Space",
+    "subtitle": "Trust, quality and care in every detail. Leave the cleaning to us and enjoy your time.",
+    "cta": "Get a Free Quote",
+    "scrollDown": "Scroll down",
+    "stats": {
+      "clients": "500+",
+      "clientsLabel": "Clients",
+      "years": "10+",
+      "yearsLabel": "Years Exp.",
+      "satisfaction": "100%",
+      "satisfactionLabel": "Satisfaction"
+    }
+  },
+  "services": {
+    "badge": "What We Offer",
+    "title": "Our Services",
+    "subtitle": "We offer complete and customized solutions to meet all your cleaning needs.",
+    "residential": {
+      "title": "Residential Cleaning",
+      "description": "Let your home shine with our complete and detailed cleaning services.",
+      "items": [
+        "Floor cleaning and vacuuming",
+        "Bathroom sanitization",
+        "Kitchen and common area cleaning",
+        "Dust and cobweb removal"
+      ]
+    },
+    "commercial": {
+      "title": "Commercial Cleaning",
+      "description": "A clean and organized work environment for your team and clients.",
+      "items": [
+        "Office and room cleaning",
+        "Common area maintenance",
+        "Glass and facade cleaning",
+        "Waste management"
+      ]
+    },
+    "deep": {
+      "title": "Deep Cleaning",
+      "description": "A thorough cleaning to completely renew your space.",
+      "items": [
+        "Cabinet and interior cleaning",
+        "Upholstery and rug sanitization",
+        "Post-construction cleaning",
+        "Floor treatment"
+      ]
+    }
+  },
+  "whyUs": {
+    "badge": "Our Differentials",
+    "title": "Why choose us?",
+    "subtitle": "Our differentials guarantee a superior cleaning service and your complete satisfaction.",
+    "trained": {
+      "title": "Trained Team",
+      "description": "Qualified and trustworthy professionals to ensure the best service."
+    },
+    "products": {
+      "title": "Eco-friendly Products",
+      "description": "We use sustainable products that are safe for your family and the planet."
+    },
+    "safety": {
+      "title": "Fully Insured",
+      "description": "Our services are fully insured for your peace of mind and security."
+    },
+    "quality": {
+      "title": "Guaranteed Quality",
+      "description": "Commitment to excellence and your satisfaction in every cleaning done."
+    }
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "Who We Are",
+    "imgAlt": "LimpaPro Team",
+    "imgBadge": "10 years of experience",
+    "p1": "LimpaPro was born from the passion for creating cleaner, healthier and more pleasant environments. We are a dedicated team offering high-quality cleaning services, with a total focus on customer satisfaction.",
+    "p2": "Our mission is simple: to provide peace of mind through reliable and efficient service. Our values are the foundation of everything we do: professionalism, integrity and an unwavering commitment to excellence.",
+    "items": {
+      "experience": "Over 10 years of experience",
+      "clients": "Over 500 satisfied clients",
+      "team": "Trained and uniformed team",
+      "products": "Certified eco-friendly products"
+    },
+    "cta": "Get in touch"
+  },
+  "contact": {
+    "badge": "Get in Touch",
+    "title": "Contact Us",
+    "subtitle": "Ready for a spotless environment? Talk to us and request your no-commitment quote.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "(XX) XXXXX-XXXX",
+      "service": "Service Type",
+      "servicePlaceholder": "Select a service",
+      "message": "Message",
+      "messagePlaceholder": "Describe what you need...",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "services": {
+        "residential": "Residential Cleaning",
+        "commercial": "Commercial Cleaning",
+        "deep": "Deep Cleaning"
+      }
+    },
+    "info": {
+      "title": "Our Information",
+      "location": "Our Location"
+    },
+    "toast": {
+      "success": "Message sent successfully! We will get in touch soon.",
+      "error": "An error occurred while sending the message. Please try again."
+    }
+  },
+  "footer": {
+    "tagline": "Professional cleaning with quality and trust.",
+    "links": "Quick Links",
+    "contact": "Contact",
+    "rights": "© {{year}} LimpaPro. All rights reserved."
+  },
+  "scrollToTop": "Back to top",
+  "whatsapp": {
+    "label": "Chat on WhatsApp",
+    "ariaLabel": "Contact us on WhatsApp",
+    "message": "Hello! I would like to request a cleaning quote."
+  },
+  "theme": {
+    "toDark": "Enable dark mode",
+    "toLight": "Enable light mode"
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Oops! Page not found",
+    "back": "Back to Home"
+  }
+}

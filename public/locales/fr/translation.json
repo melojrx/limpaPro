@@ -1,0 +1,155 @@
+{
+  "common": {
+    "cta": "Obtenir un Devis Gratuit",
+    "learnMore": "En Savoir Plus",
+    "send": "Envoyer le Message",
+    "sending": "Envoi en cours...",
+    "loading": "Chargement..."
+  },
+  "nav": {
+    "services": "Services",
+    "whyUs": "Pourquoi Nous",
+    "about": "À Propos",
+    "contact": "Contact",
+    "cta": "Obtenir un Devis"
+  },
+  "hero": {
+    "badge": "Service de Nettoyage Professionnel",
+    "title": "Nettoyage Professionnel qui Transforme Votre Espace",
+    "subtitle": "Confiance, qualité et soin dans chaque détail. Laissez le nettoyage à notre charge et profitez de votre temps.",
+    "cta": "Obtenir un Devis Gratuit",
+    "scrollDown": "Défiler vers le bas",
+    "stats": {
+      "clients": "500+",
+      "clientsLabel": "Clients",
+      "years": "10+",
+      "yearsLabel": "Ans d'Exp.",
+      "satisfaction": "100%",
+      "satisfactionLabel": "Satisfaction"
+    }
+  },
+  "services": {
+    "badge": "Ce Que Nous Offrons",
+    "title": "Nos Services",
+    "subtitle": "Nous offrons des solutions complètes et personnalisées pour répondre à tous vos besoins de nettoyage.",
+    "residential": {
+      "title": "Nettoyage Résidentiel",
+      "description": "Laissez votre maison briller avec nos services de nettoyage complets et détaillés.",
+      "items": [
+        "Nettoyage des sols et aspiration",
+        "Désinfection des salles de bain",
+        "Nettoyage de la cuisine et des espaces communs",
+        "Élimination de la poussière et des toiles d'araignée"
+      ]
+    },
+    "commercial": {
+      "title": "Nettoyage Commercial",
+      "description": "Un environnement de travail propre et organisé pour votre équipe et vos clients.",
+      "items": [
+        "Nettoyage des bureaux et des salles",
+        "Entretien des espaces communs",
+        "Nettoyage des vitres et des façades",
+        "Gestion des déchets"
+      ]
+    },
+    "deep": {
+      "title": "Nettoyage en Profondeur",
+      "description": "Un nettoyage approfondi pour renouveler complètement votre espace.",
+      "items": [
+        "Nettoyage des armoires et des intérieurs",
+        "Désinfection des rembourrages et des tapis",
+        "Nettoyage post-travaux",
+        "Traitement des sols"
+      ]
+    }
+  },
+  "whyUs": {
+    "badge": "Nos Différences",
+    "title": "Pourquoi nous choisir ?",
+    "subtitle": "Nos différences garantissent un service de nettoyage supérieur et votre entière satisfaction.",
+    "trained": {
+      "title": "Équipe Formée",
+      "description": "Des professionnels qualifiés et de confiance pour garantir le meilleur service."
+    },
+    "products": {
+      "title": "Produits Écologiques",
+      "description": "Nous utilisons des produits durables, sûrs pour votre famille et la planète."
+    },
+    "safety": {
+      "title": "Entièrement Assuré",
+      "description": "Nos services sont entièrement assurés pour votre tranquillité d'esprit et votre sécurité."
+    },
+    "quality": {
+      "title": "Qualité Garantie",
+      "description": "Engagement envers l'excellence et votre satisfaction à chaque nettoyage effectué."
+    }
+  },
+  "about": {
+    "badge": "À Propos de Nous",
+    "title": "Qui Sommes-Nous",
+    "imgAlt": "Équipe LimpaPro",
+    "imgBadge": "10 ans d'expérience",
+    "p1": "LimpaPro est né de la passion pour des environnements plus propres, plus sains et plus agréables. Nous sommes une équipe dédiée à offrir des services de nettoyage de haute qualité, avec une attention totale à la satisfaction de nos clients.",
+    "p2": "Notre mission est simple : apporter la tranquillité d'esprit grâce à un service fiable et efficace. Nos valeurs sont la base de tout ce que nous faisons : professionnalisme, intégrité et un engagement indéfectible envers l'excellence.",
+    "items": {
+      "experience": "Plus de 10 ans d'expérience",
+      "clients": "Plus de 500 clients satisfaits",
+      "team": "Équipe formée et en uniforme",
+      "products": "Produits éco-certifiés"
+    },
+    "cta": "Nous contacter"
+  },
+  "contact": {
+    "badge": "Contactez-Nous",
+    "title": "Prendre Contact",
+    "subtitle": "Prêt pour un environnement impeccable ? Parlez-nous et demandez votre devis sans engagement.",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom complet",
+      "email": "Email",
+      "emailPlaceholder": "vous@email.com",
+      "phone": "Téléphone",
+      "phonePlaceholder": "(XX) XXXXX-XXXX",
+      "service": "Type de Service",
+      "servicePlaceholder": "Sélectionnez un service",
+      "message": "Message",
+      "messagePlaceholder": "Décrivez ce dont vous avez besoin...",
+      "submit": "Envoyer le Message",
+      "submitting": "Envoi en cours...",
+      "services": {
+        "residential": "Nettoyage Résidentiel",
+        "commercial": "Nettoyage Commercial",
+        "deep": "Nettoyage en Profondeur"
+      }
+    },
+    "info": {
+      "title": "Nos Informations",
+      "location": "Notre Localisation"
+    },
+    "toast": {
+      "success": "Message envoyé avec succès ! Nous vous contacterons bientôt.",
+      "error": "Une erreur s'est produite lors de l'envoi. Veuillez réessayer."
+    }
+  },
+  "footer": {
+    "tagline": "Nettoyage professionnel avec qualité et confiance.",
+    "links": "Liens Rapides",
+    "contact": "Contact",
+    "rights": "© {{year}} LimpaPro. Tous droits réservés."
+  },
+  "scrollToTop": "Retour en haut",
+  "whatsapp": {
+    "label": "Discuter sur WhatsApp",
+    "ariaLabel": "Contactez-nous sur WhatsApp",
+    "message": "Bonjour ! Je souhaite demander un devis de nettoyage."
+  },
+  "theme": {
+    "toDark": "Activer le mode sombre",
+    "toLight": "Activer le mode clair"
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Oops ! Page introuvable",
+    "back": "Retour à l'Accueil"
+  }
+}

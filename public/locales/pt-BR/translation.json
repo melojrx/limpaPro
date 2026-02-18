@@ -1,0 +1,155 @@
+{
+  "common": {
+    "cta": "Solicitar Orçamento Grátis",
+    "learnMore": "Saiba Mais",
+    "send": "Enviar Mensagem",
+    "sending": "Enviando...",
+    "loading": "Carregando..."
+  },
+  "nav": {
+    "services": "Serviços",
+    "whyUs": "Diferenciais",
+    "about": "Sobre Nós",
+    "contact": "Contato",
+    "cta": "Solicitar Orçamento"
+  },
+  "hero": {
+    "badge": "Serviço de Limpeza Profissional",
+    "title": "Limpeza Profissional que Transforma seu Ambiente",
+    "subtitle": "Confiança, qualidade e cuidado em cada detalhe. Deixe a limpeza conosco e aproveite seu tempo.",
+    "cta": "Solicitar Orçamento Grátis",
+    "scrollDown": "Role para baixo",
+    "stats": {
+      "clients": "500+",
+      "clientsLabel": "Clientes",
+      "years": "10+",
+      "yearsLabel": "Anos de Exp.",
+      "satisfaction": "100%",
+      "satisfactionLabel": "Satisfação"
+    }
+  },
+  "services": {
+    "badge": "O Que Oferecemos",
+    "title": "Nossos Serviços",
+    "subtitle": "Oferecemos soluções completas e personalizadas para atender às suas necessidades de limpeza.",
+    "residential": {
+      "title": "Limpeza Residencial",
+      "description": "Deixe sua casa brilhando com nossos serviços completos e detalhados.",
+      "items": [
+        "Limpeza de pisos e aspiração",
+        "Higienização de banheiros",
+        "Limpeza de cozinha e áreas comuns",
+        "Remoção de pó e teias de aranha"
+      ]
+    },
+    "commercial": {
+      "title": "Limpeza Comercial",
+      "description": "Um ambiente de trabalho limpo e organizado para sua equipe e clientes.",
+      "items": [
+        "Limpeza de escritórios e salas",
+        "Manutenção de áreas comuns",
+        "Limpeza de vidros e fachadas",
+        "Gestão de resíduos"
+      ]
+    },
+    "deep": {
+      "title": "Faxina Completa",
+      "description": "Uma limpeza profunda para renovar completamente seu espaço.",
+      "items": [
+        "Limpeza de armários e interiores",
+        "Higienização de estofados e tapetes",
+        "Limpeza pós-obra",
+        "Tratamento de pisos"
+      ]
+    }
+  },
+  "whyUs": {
+    "badge": "Nossos Diferenciais",
+    "title": "Por que nos escolher?",
+    "subtitle": "Nossos diferenciais garantem um serviço de limpeza superior e a sua total satisfação.",
+    "trained": {
+      "title": "Equipe Treinada",
+      "description": "Profissionais qualificados e de confiança para garantir o melhor serviço."
+    },
+    "products": {
+      "title": "Produtos Ecológicos",
+      "description": "Utilizamos produtos sustentáveis que são seguros para sua família e o planeta."
+    },
+    "safety": {
+      "title": "Seguro Total",
+      "description": "Nossos serviços são totalmente segurados para sua tranquilidade e segurança."
+    },
+    "quality": {
+      "title": "Qualidade Garantida",
+      "description": "Compromisso com a excelência e a sua satisfação em cada limpeza realizada."
+    }
+  },
+  "about": {
+    "badge": "Sobre Nós",
+    "title": "Quem Somos",
+    "imgAlt": "Equipe LimpaPro",
+    "imgBadge": "10 anos de experiência",
+    "p1": "A LimpaPro nasceu da paixão por criar ambientes mais limpos, saudáveis e agradáveis. Somos uma equipe dedicada a oferecer serviços de limpeza de alta qualidade, com foco total na satisfação de nossos clientes.",
+    "p2": "Nossa missão é simples: proporcionar tranquilidade através de um serviço confiável e eficiente. Nossos valores são a base de tudo o que fazemos: profissionalismo, integridade e um compromisso inabalável com a excelência.",
+    "items": {
+      "experience": "Mais de 10 anos de experiência",
+      "clients": "Mais de 500 clientes satisfeitos",
+      "team": "Equipe treinada e uniformizada",
+      "products": "Produtos eco-friendly certificados"
+    },
+    "cta": "Entre em contato"
+  },
+  "contact": {
+    "badge": "Fale Conosco",
+    "title": "Entre em Contato",
+    "subtitle": "Pronto para ter um ambiente impecável? Fale conosco e solicite seu orçamento sem compromisso.",
+    "form": {
+      "name": "Nome",
+      "namePlaceholder": "Seu nome completo",
+      "email": "Email",
+      "emailPlaceholder": "seu@email.com",
+      "phone": "Telefone",
+      "phonePlaceholder": "(XX) XXXXX-XXXX",
+      "service": "Tipo de Serviço",
+      "servicePlaceholder": "Selecione o serviço",
+      "message": "Mensagem",
+      "messagePlaceholder": "Descreva o que você precisa...",
+      "submit": "Enviar Mensagem",
+      "submitting": "Enviando...",
+      "services": {
+        "residential": "Limpeza Residencial",
+        "commercial": "Limpeza Comercial",
+        "deep": "Faxina Completa"
+      }
+    },
+    "info": {
+      "title": "Nossas Informações",
+      "location": "Nossa Localização"
+    },
+    "toast": {
+      "success": "Mensagem enviada com sucesso! Entraremos em contato em breve.",
+      "error": "Ocorreu um erro ao enviar a mensagem. Tente novamente."
+    }
+  },
+  "footer": {
+    "tagline": "Limpeza profissional com qualidade e confiança.",
+    "links": "Links Rápidos",
+    "contact": "Contato",
+    "rights": "© {{year}} LimpaPro. Todos os direitos reservados."
+  },
+  "scrollToTop": "Voltar ao topo",
+  "whatsapp": {
+    "label": "Fale no WhatsApp",
+    "ariaLabel": "Fale conosco no WhatsApp",
+    "message": "Olá! Gostaria de solicitar um orçamento de limpeza."
+  },
+  "theme": {
+    "toDark": "Ativar modo escuro",
+    "toLight": "Ativar modo claro"
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Oops! Página não encontrada",
+    "back": "Voltar ao Início"
+  }
+}

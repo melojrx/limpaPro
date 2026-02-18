@@ -1,48 +1,57 @@
+import { useTranslation } from 'react-i18next';
 import { Award, Leaf, ShieldCheck, Users } from 'lucide-react';
 import AnimatedWrapper from './AnimatedWrapper';
 
-const features = [
-  {
-    icon: <Users className="h-10 w-10 text-blue-800" />,
-    title: 'Equipe Treinada',
-    description: 'Profissionais qualificados e de confiança para garantir o melhor serviço.',
-  },
-  {
-    icon: <Leaf className="h-10 w-10 text-green-600" />,
-    title: 'Produtos Ecológicos',
-    description: 'Utilizamos produtos sustentáveis que são seguros para sua família e o planeta.',
-  },
-  {
-    icon: <ShieldCheck className="h-10 w-10 text-blue-800" />,
-    title: 'Seguro Total',
-    description: 'Nossos serviços são totalmente segurados para sua tranquilidade e segurança.',
-  },
-  {
-    icon: <Award className="h-10 w-10 text-green-600" />,
-    title: 'Qualidade Garantida',
-    description: 'Compromisso com a excelência e a sua satisfação em cada limpeza realizada.',
-  },
-];
+type FeatureKey = 'trained' | 'products' | 'safety' | 'quality';
+
+const featureIcons: Record<FeatureKey, React.ReactNode> = {
+  trained:  <Users className="h-8 w-8 text-blue-800 dark:text-blue-400" />,
+  products: <Leaf className="h-8 w-8 text-green-600 dark:text-green-400" />,
+  safety:   <ShieldCheck className="h-8 w-8 text-blue-800 dark:text-blue-400" />,
+  quality:  <Award className="h-8 w-8 text-green-600 dark:text-green-400" />,
+};
+
+const featureKeys: FeatureKey[] = ['trained', 'products', 'safety', 'quality'];
+
+const SectionBadge = ({ label }: { label: string }) => (
+  <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 text-sm font-medium mb-3">
+    {label}
+  </span>
+);
 
 const WhyUs = () => {
+  const { t } = useTranslation();
+
   return (
-    <section id="why-us" className="py-16 md:py-24">
+    <section id="why-us" className="py-16 md:py-24 dark:bg-gray-950 transition-colors duration-300">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Por que nos escolher?</h2>
-          <p className="mt-4 text-lg text-gray-500">
-            Nossos diferenciais garantem um serviço de limpeza superior e a sua total satisfação.
+          <SectionBadge label={t('whyUs.badge')} />
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-50">
+            {t('whyUs.title')}
+          </h2>
+          <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">
+            {t('whyUs.subtitle')}
           </p>
         </div>
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {features.map((feature, index) => (
-            <AnimatedWrapper key={feature.title} delay={index * 100}>
-              <div className="text-center p-6">
-                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mx-auto mb-4 transition-transform duration-300 hover:scale-110">
-                  {feature.icon}
+          {featureKeys.map((key, index) => (
+            <AnimatedWrapper key={key} delay={index * 100} direction="up">
+              <div className="text-center p-6 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors duration-300">
+                {/* Número */}
+                <p className="text-xs font-heading font-bold text-blue-400 dark:text-blue-600 tracking-widest uppercase mb-3">
+                  {String(index + 1).padStart(2, '0')}
+                </p>
+                {/* Círculo do ícone */}
+                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-50 dark:bg-blue-950 mx-auto mb-4 transition-transform duration-300 hover:scale-110">
+                  {featureIcons[key]}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800">{feature.title}</h3>
-                <p className="mt-2 text-gray-500">{feature.description}</p>
+                <h3 className="text-lg font-heading font-semibold text-gray-800 dark:text-gray-50">
+                  {t(`whyUs.${key}.title`)}
+                </h3>
+                <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                  {t(`whyUs.${key}.description`)}
+                </p>
               </div>
             </AnimatedWrapper>
           ))}

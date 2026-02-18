@@ -17,7 +17,7 @@ const Map = () => {
       }).addTo(map);
 
       const marker = L.marker([-22.7209, -47.6441]).addTo(map);
-      
+
       marker.bindPopup(`
         <b>LimpaPro</b><br>
         Rua São Joaquim, 240 - Santana, Piracicaba - SP<br>
@@ -34,9 +34,9 @@ const Map = () => {
   }, []);
 
   return (
-    <div 
-      ref={mapContainerRef} 
-      className="h-[250px] md:h-[300px] w-full rounded-lg shadow-md z-0"
+    <div
+      ref={mapContainerRef}
+      className="h-[250px] md:h-[300px] w-full rounded-lg shadow-md z-0 dark:opacity-80 dark:grayscale dark:brightness-75"
       id="map"
     />
   );
